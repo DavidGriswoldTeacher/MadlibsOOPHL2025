@@ -6,9 +6,9 @@ public class App {
      * Where the program begins!
      */
     public void start() {
-         myMadlib = readMadlib("madlib.txt");
-        // promptForAnswers();
-        // printMadlib();
+        myMadlib = readMadlib("madlib.txt");
+        promptForAnswers();
+        printMadlib();
     }
 
 
@@ -37,7 +37,16 @@ public class App {
         return m;
     }
 
+    public void promptForAnswers() {
+        for (int i = 0; i < myMadlib.getNumQuestions(); i++) {
+            printer.output(myMadlib.getQuestion(i));
+            myMadlib.addAnswer(printer.input());
+        }
+    }
 
+    public void printMadlib() {
+        printer.output(myMadlib.getFullStory());
+    }
 
     
     public static void main(String[] args) throws Exception {
