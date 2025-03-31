@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.*;
 
-public class InputOutput {
+public class Printer {
     
     private Scanner in = new Scanner(System.in);
     private Scanner fileInput;
@@ -31,8 +31,7 @@ public class InputOutput {
             return fileInput.nextLine();
         }else {
             return "";
-        }
-        
+        }      
     }
 
     public void output(String s) {
